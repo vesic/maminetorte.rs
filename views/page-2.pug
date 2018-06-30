@@ -1,5 +1,30 @@
-html
-  head
-    title= title
-  body
-    h1= message
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title Document
+    link(rel='shortcut icon' type='image/x-icon' href='')
+    link(rel='stylesheet' href='/css/bundle.css')
+    link(href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet')
+
+div(style='text-align: center; margin: 75px 0;')
+    h2 cakes 2
+    a(href="/") back
+
+.Container
+    .Images
+        for image in images
+            .Image
+                .Image-overlay
+                img(src=image.thumb data-zoom=image.reg alt='')
+
+.Lightbox
+    img.portrait
+.Exif
+    a.Exif-close(href='') x
+    table
+        tbody
+
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+script(src='/js/bundle.js')
