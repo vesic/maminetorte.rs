@@ -6,11 +6,11 @@ const path = require('path')
 app.set('view engine', 'pug')
 
 app.use(express.static(__dirname + '/public'))
-// express.static(path.join(__dirname, "static")))
-app.use('/torte', cakes)
 
-app.get('/dirname', (req, res) => {
-  res.send(__dirname)
+app.get('/', (req, res) => {
+  res.render('index')
 })
+
+app.use('/torte', cakes)
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
