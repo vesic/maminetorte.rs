@@ -11,7 +11,7 @@ router.get('/page-2', function (req, res) {
 })
 
 router.get('/page-3', (req, res) => {
-  res.sendFile(__dirname + './page-3.html')
+  res.sendFile(path.resolve(__dirname, 'public', 'page-3.html'))
 })
 
 router.get('/dirname', (req, res) => {
