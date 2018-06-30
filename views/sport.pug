@@ -8,16 +8,17 @@ head
     link(rel='stylesheet' href='/css/bundle.css')
     link(href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet')
 
-div(style='text-align: center; margin: 75px 0;')
-    h2 cakes 1
-    a(href="/") back
+div(style='text-align: center; margin: 50px 0;')
+    div.main-head sportske
+    div.sub-head
+        a(href="/") nazad
 
 .Container
     .Images
         for image in images
             .Image
                 .Image-overlay
-                img(src=image.thumb data-zoom=image.reg alt='')
+                img(src=image.url data-zoom=image.url alt='')
 
 .Lightbox
     img.portrait

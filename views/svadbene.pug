@@ -1,0 +1,31 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title Document
+    link(rel='shortcut icon' type='image/x-icon' href='')
+    link(rel='stylesheet' href='/css/bundle.css')
+    link(href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet')
+
+div(style='text-align: center; margin: 50px 0;')
+    div.main-head svadbene
+    div.sub-head
+        a(href="/") nazad
+
+.Container
+    .Images
+        for image in images
+            .Image
+                .Image-overlay
+                img(src=image.url data-zoom=image.url alt='')
+
+.Lightbox
+    img.portrait
+.Exif
+    a.Exif-close(href='') x
+    table
+        tbody
+
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+script(src='/js/bundle.js')
