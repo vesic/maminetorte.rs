@@ -1,18 +1,13 @@
-var express = require('express')
-var router = express.Router()
-
-router.get('/', function (req, res) {
-  res.sendFile(__dirname + '/public/index.html')
-})
+const express = require('express')
+const router = express.Router()
+const path = require('path')
 
 router.get('/page-1', function (req, res) {
-  // res.sendFile(__dirname + '/public/page-1.html')
-  res.sendFile("page-1.html", {"root": __dirname + '/public'});
+  res.render('page-1', { title: 'page-1', message: 'page-1.html' })
 })
 
 router.get('/page-2', function (req, res) {
-  // res.sendFile(__dirname + '/public/page-2.html')
-  res.sendFile("page-2.html", {"root": __dirname + '/public'});
+  res.render('page-2', { title: 'page-2', message: 'page-2.html' })
 })
 
 module.exports = router
