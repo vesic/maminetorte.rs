@@ -10,6 +10,9 @@ router.get('/page-2', function (req, res) {
   res.render('page-2', { title: 'page-2', message: 'page-2.html' })
 })
 
+router.get('/page-3', (req, res) => {
+  res.sendFile(__dirname + './page-3.html')
+})
 
 router.get('/dirname', (req, res) => {
   res.send(__dirname)

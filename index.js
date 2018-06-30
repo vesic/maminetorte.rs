@@ -6,7 +6,7 @@ const path = require('path')
 app.set('view engine', 'pug')
 
 app.use(express.static(__dirname + '/public'))
-
+// express.static(path.join(__dirname, "static")))
 app.use('/torte', cakes)
 
 app.get('/dirname', (req, res) => {
