@@ -10,4 +10,10 @@ router.get('/page-2', function (req, res) {
   res.render('page-2', { title: 'page-2', message: 'page-2.html' })
 })
 
+
+app.get('/dirname', (req, res) => {
+  res.send(__dirname)
+})
+
+
 module.exports = router
