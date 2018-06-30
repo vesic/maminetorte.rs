@@ -11,7 +11,7 @@ router.get('/page-2', function (req, res) {
 })
 
 
-app.get('/dirname', (req, res) => {
+router.get('/dirname', (req, res) => {
   res.send(__dirname)
 })
 

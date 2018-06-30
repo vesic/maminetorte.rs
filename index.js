@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.use('/torte', cakes)
 
-app.get('dirname', (req, res) => {
+app.get('/dirname', (req, res) => {
   res.send(__dirname)
 })
 
